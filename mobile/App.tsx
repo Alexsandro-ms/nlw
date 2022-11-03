@@ -12,10 +12,10 @@ import { THEME } from "./src/styles/theme";
 // Components
 import { Loading } from "./src/components/Loading";
 // Pages
-// import { SignIn } from "./src/screens/Signin";
+import { SignIn } from "./src/screens/Signin";
 // import { NewPool } from "./src/screens/NewPool";
 // import { FindPool } from "./src/screens/FindPool";
-import { Pools } from "./src/screens/Pools";
+// import { Pools } from "./src/screens/Pools";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -32,7 +32,7 @@ export default function App() {
           backgroundColor={"transparent"}
           translucent
         />
-        {fontsLoaded ? <Pools /> : <Loading />}
+        {fontsLoaded ? <SignIn /> : <Loading />}
       </AuthContextProvider>
     </NativeBaseProvider>
   );
