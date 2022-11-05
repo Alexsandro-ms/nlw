@@ -9,6 +9,7 @@ import { SignIn } from "../screens/Signin";
 import { NewPoll } from "../screens/NewPoll";
 import { FindPoll } from "../screens/FindPoll";
 import { Polls } from "../screens/Polls";
+import { DetailsPoll } from "../screens/DetailsPoll";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -53,6 +54,12 @@ export function AppRoutes() {
       <Screen
         name="findPoll"
         component={FindPoll}
+        options={{ tabBarButton: () => null }}
+      />
+
+      <Screen
+        name="details"
+        component={DetailsPoll}
         options={{ tabBarButton: () => null }}
       />
     </Navigator>

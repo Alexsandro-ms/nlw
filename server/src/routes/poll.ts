@@ -73,7 +73,7 @@ export async function pollRoutes(fastify: FastifyInstance) {
 
       if (!poll) {
         return response.status(400).send({
-          message: "Poll not found"
+          message: "Poll not found."
         });
       }
 
