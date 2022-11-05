@@ -8,9 +8,9 @@ import { HStack, Toast, VStack } from "native-base";
 
 import { Header } from "../components/Header";
 import { Loading } from "../components/Loading";
-import { PollCardProps } from "../components/PoolCard";
-import { PoolHeader } from "../components/PoolHeader";
-import { EmptyMyPoolList } from "../components/EmptyMyPoolList";
+import { PollCardProps } from "../components/PollCard";
+import { PollHeader } from "../components/PollHeader";
+import { EmptyMyPollList } from "../components/EmptyMyPollList";
 import { Option } from "../components/Option";
 import { Guesses } from "../components/Guesses";
 
@@ -48,7 +48,7 @@ export function DetailsPoll() {
   const fetchPollDetails = async () => {
     try {
       setIsLoading(true);
-      const response = await api.get(`/pools/${id}`);
+      const response = await api.get(`/polls/${id}`);
 
       setPollDetails(response.data.polls);
     } catch (err) {
@@ -93,7 +93,7 @@ export function DetailsPoll() {
         />
         {pollDetails._count?.participants > 0 ? (
           <VStack px={5} flex={1}>
-            <PoolHeader data={pollDetails} />
+            <PollHeader data={pollDetails} />
             <HStack bgColor="gray.800" p={1} rounded="sm" mb={5}>
               <Option
                 title="Seus Palpites"
@@ -110,7 +110,7 @@ export function DetailsPoll() {
             <Guesses poolId={pollDetails.id} code={pollDetails.code} />
           </VStack>
         ) : (
-          <EmptyMyPoolList code={pollDetails.code} />
+          <EmptyMyPollList code={pollDetails.code} />
         )}
       </VStack>
     );

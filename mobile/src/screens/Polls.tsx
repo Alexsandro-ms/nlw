@@ -8,8 +8,8 @@ import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import { Button } from "../components/Button";
 import { Header } from "../components/Header";
 import { Loading } from "../components/Loading";
-import { PoolCard, PollCardProps } from "../components/PoolCard";
-import { EmptyPoolList } from "../components/EmptyPoolList";
+import { PollCard, PollCardProps } from "../components/PollCard";
+import { EmptyPoolList } from "../components/EmptyPollList";
 
 /* importando conexão com o banco de dados */
 import { api } from "../service/api";
@@ -29,7 +29,7 @@ export function Polls() {
     try {
       setIsLoading(true);
 
-      const response = await api.get("/pools");
+      const response = await api.get("/polls");
 
       setPolls(response.data.polls);
     } catch (err) {
@@ -77,7 +77,7 @@ export function Polls() {
           data={polls}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
-            <PoolCard
+            <PollCard
               data={item}
               onPress={() => navigate("details", { id: item.id })}
             />

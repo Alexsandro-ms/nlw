@@ -5,7 +5,7 @@ import { api } from "../service/api";
 
 import { Game, GameProps } from "../components/Game";
 import { Loading } from "./Loading";
-import { EmptyMyPoolList } from "./EmptyMyPoolList";
+import { EmptyMyPoolList } from "./EmptyMyPollList";
 
 interface Props {
   poolId: string;

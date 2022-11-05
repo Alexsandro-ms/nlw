@@ -22,7 +22,7 @@ interface Props extends TouchableOpacityProps {
   data: PollCardProps;
 }
 
-export function PoolCard({ data, ...rest }: Props) {
+export function PollCard({ data, ...rest }: Props) {
   return (
     <TouchableOpacity {...rest}>
       <HStack
