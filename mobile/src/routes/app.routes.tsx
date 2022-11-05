@@ -14,9 +14,12 @@ import { DetailsPoll } from "../screens/DetailsPoll";
 const { Navigator, Screen } = createBottomTabNavigator();
 
 export function AppRoutes() {
+  /* É uma função que retorna um objeto com as cores e tamanhos do tema. */
   const { colors, sizes } = useTheme();
   const size = sizes[6];
+  /* ------------------------------------------------------------------- */
   return (
+    // Estilização da navegação
     <Navigator
       screenOptions={{
         headerShown: false,
@@ -34,6 +37,9 @@ export function AppRoutes() {
         }
       }}
     >
+      {/* Rotas da aplicação */}
+
+      {/* Criação de Bolão */}
       <Screen
         name="newPoll"
         component={NewPoll}
@@ -42,6 +48,8 @@ export function AppRoutes() {
           tabBarLabel: "Novo bolão"
         }}
       />
+
+      {/* Bolões */}
       <Screen
         name="polls"
         component={Polls}
@@ -51,12 +59,14 @@ export function AppRoutes() {
         }}
       />
 
+      {/* Buscar Bolão */}
       <Screen
         name="findPoll"
         component={FindPoll}
         options={{ tabBarButton: () => null }}
       />
 
+      {/* Detalhes do Bolão */}
       <Screen
         name="details"
         component={DetailsPoll}

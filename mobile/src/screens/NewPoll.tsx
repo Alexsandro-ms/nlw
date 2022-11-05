@@ -1,19 +1,26 @@
+/* Importando os componentes de suas repectivas libs */
 import { useState } from "react";
 import { Heading, VStack, Text, useToast, Toast } from "native-base";
 
+/* Importando o arquivo logo.svg da pasta assets. */
 import Logo from "../assets/logo.svg";
 
-import { api } from "../service/api";
-
+/* Importando os componentes da pasta de componentes. */
 import { Header } from "../components/Header";
 import { Input } from "../components/Input";
 import { Button } from "../components/Button";
 
+// Importando a conexão com o banco de dados
+import { api } from "../service/api";
+
 export function NewPoll() {
+  /* Definindo os Hooks */
   const [title, setTitle] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const handlePollCreate = async () => {
+    /* Verificando se o título está vazio. */
+
     if (!title.trim()) {
       return Toast.show({
         title: "Informe um nome para seu bolão.",
@@ -22,23 +29,27 @@ export function NewPoll() {
       });
     }
     try {
+      /* Definindo o loading como true */
       setIsLoading(true);
 
+      /* Enviando title para o backend */
       await api.post("/pools", { title: title.toUpperCase() });
 
+      /* retornando uma mensagem*/
       Toast.show({
         title: "Bolão criado com sucesso!",
         placement: "top",
         bgColor: "green.500"
       });
     } catch (err) {
-      console.log();
+      /* retornando mensagem de erro */
       Toast.show({
         title: "Não foi Possível criar o bolão!",
         placement: "top",
         bgColor: "red.500"
       });
     } finally {
+      /* Configurando o título como uma string vazia e configurando o carregamento como false. */
       setTitle("");
       setIsLoading(false);
     }

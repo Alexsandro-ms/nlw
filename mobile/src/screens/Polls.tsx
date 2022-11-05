@@ -1,21 +1,30 @@
+/* Importando os componentes necessários das bibliotecas. */
 import { useCallback, useState } from "react";
 import { VStack, Icon, Toast, FlatList } from "native-base";
 import { Octicons } from "@expo/vector-icons";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 
-import { api } from "../service/api";
-
+/* Importando os componentes da pasta de componentes. */
 import { Button } from "../components/Button";
 import { Header } from "../components/Header";
 import { Loading } from "../components/Loading";
 import { PoolCard, PollCardProps } from "../components/PoolCard";
 import { EmptyPoolList } from "../components/EmptyPoolList";
 
+/* importando conexão com o banco de dados */
+import { api } from "../service/api";
+
 export function Polls() {
+  /* Desestruturando a função de navegação do hook useNavigation. */
   const { navigate } = useNavigation();
+  /* Um Hook de uma função que retorna um valor, com estado e uma função para atualizá-lo. */
   const [isLoading, setIsLoading] = useState(true);
   const [polls, setPolls] = useState<PollCardProps[]>([]);
 
+  /**
+   * FetchPolls é uma função que busca enquetes da API e define o estado da variável de enquetes
+   * aos dados de resposta.
+   */
   const fetchPolls = async () => {
     try {
       setIsLoading(true);
@@ -35,6 +44,7 @@ export function Polls() {
     }
   };
 
+  /* Um Hook que é chamado quando a tela está com foco. */
   useFocusEffect(
     useCallback(() => {
       fetchPolls();

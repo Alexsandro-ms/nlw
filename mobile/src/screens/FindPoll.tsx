@@ -1,7 +1,9 @@
+/* Importando os componentes de suas respectivas libs. */
 import { useState } from "react";
 import { Heading, VStack, Toast } from "native-base";
 import { useNavigation } from "@react-navigation/native";
 
+/* Importando os componentes dos componentes da pasta. */
 import { Header } from "../components/Header";
 import { Input } from "../components/Input";
 import { Button } from "../components/Button";
@@ -9,10 +11,12 @@ import { Button } from "../components/Button";
 import { api } from "../service/api";
 
 export function FindPoll() {
+  /* Defininfo os Hooks. */
   const [isLoading, setIsLoading] = useState(false);
   const [code, setCode] = useState("");
   const { navigate } = useNavigation();
 
+  // Função para entrar em um bolão
   const handleJoinPoll = async () => {
     try {
       setIsLoading(true);
@@ -60,6 +64,7 @@ export function FindPoll() {
       setIsLoading(false);
     }
   };
+
   return (
     <VStack flex={1} bgColor="gray.900">
       <Header title="Buscar código" showBackButton />

@@ -1,5 +1,6 @@
 import { extendTheme } from "native-base";
 
+/* Estendendo o tema do native base */
 export const THEME = extendTheme({
   colors: {
     gray: {
