@@ -1,12 +1,17 @@
+/* Importando o `FormEvent` e o `useState` da biblioteca `react`. */
 import React, { FormEvent, useState } from "react";
 
+/* Importando imagens. */
 import Image from "next/image";
 import appPreviewImg from "../assets/app-nlw.png";
 import logoImg from "../assets/logo.svg";
 import usersAvatarExampleImg from "../assets/avatares.png";
 import iconCheckImg from "../assets/icon.svg";
+
+/* Importando o objeto `api` da biblioteca `axios`. */
 import { api } from "../lib/axios";
 
+/* Está definindo o tipo de props que o componente irá receber. */
 interface HomeProps {
   poolCount: number;
   guessCount: number;
@@ -14,18 +19,26 @@ interface HomeProps {
 }
 
 export default function Home(props: HomeProps) {
+  /* Criando uma variável de estado chamada `poolTitle` e uma função chamada `setPoolTitle` para atualizar o
+  Estado variável do input. */
   const [poolTitle, setPoolTitle] = useState("");
 
   const createPool = async (event: FormEvent) => {
+    /* Impede o comportamento padrão do formulário, que é recarregar a página. */
     event.preventDefault();
     try {
+      /* Enviando uma solicitação POST para a API com o valor do input, como parâmetro de title. */
       const response = await api.post("pools", {
         title: poolTitle
       });
 
+      /* Está desestruturando o objeto response.data. */
       const { code } = response.data;
+      /* Função que grava o texto na área de transferência. */
       await navigator.clipboard.writeText(code);
+      /* Está limpando do input */
       setPoolTitle("");
+      /* É uma função que mostra uma mensagem para o usuário. */
       alert(
         "Bolão criado com sucesso, código copiado para a área de transferência!"
       );
@@ -96,6 +109,7 @@ export default function Home(props: HomeProps) {
 }
 
 export const getServerSideProps = async () => {
+  /* Fazendo várias solicitações ao mesmo tempo. */
   const [poolCountResponse, guessesCountResponse, usersCountResponse] =
     await Promise.all([
       api.get("pools/count"),
@@ -103,6 +117,7 @@ export const getServerSideProps = async () => {
       api.get("users/count")
     ]);
 
+  /* Retornando os dados da API. */
   return {
     props: {
       poolCount: poolCountResponse.data.count,

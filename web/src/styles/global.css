@@ -1,3 +1,4 @@
+/* Ele está importando a base, utilitários e componentes do arquivo tailwind.config.js. */
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
