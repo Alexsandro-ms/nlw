@@ -66,6 +66,7 @@ export function DetailsPoll() {
 
   const handleCodeShare = async () => {
     /* Uma função que é chamada quando o usuário clica no botão de compartilhamento. */
+
     await Share.share({
       message: pollDetails.code
     });

@@ -11,6 +11,7 @@ import { Button } from "../components/Button";
 
 export function SignIn() {
   /* Desestruturando o gancho useAuth. */
+
   const { signIn, isUserLoading } = useAuth();
 
   return (

@@ -23,8 +23,8 @@ export function Polls() {
 
   /**
    * FetchPolls é uma função que busca enquetes da API e define o estado da variável de enquetes
-   * aos dados de resposta.
-   */
+   * aos dados de resposta. */
+
   const fetchPolls = async () => {
     try {
       setIsLoading(true);

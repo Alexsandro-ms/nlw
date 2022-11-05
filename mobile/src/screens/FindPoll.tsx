@@ -17,6 +17,7 @@ export function FindPoll() {
   const { navigate } = useNavigation();
 
   // Função para entrar em um bolão
+
   const handleJoinPoll = async () => {
     try {
       setIsLoading(true);

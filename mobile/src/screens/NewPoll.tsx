@@ -20,7 +20,6 @@ export function NewPoll() {
 
   const handlePollCreate = async () => {
     /* Verificando se o título está vazio. */
-
     if (!title.trim()) {
       return Toast.show({
         title: "Informe um nome para seu bolão.",
