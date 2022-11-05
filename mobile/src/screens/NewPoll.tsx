@@ -33,7 +33,7 @@ export function NewPoll() {
       setIsLoading(true);
 
       /* Enviando title para o backend */
-      await api.post("/polls", { title: title.toUpperCase() });
+      await api.post("/pools", { title: title.toUpperCase() });
 
       /* retornando uma mensagem*/
       Toast.show({

@@ -29,7 +29,7 @@ export function Polls() {
     try {
       setIsLoading(true);
 
-      const response = await api.get("/polls");
+      const response = await api.get("/pools");
 
       setPolls(response.data.polls);
     } catch (err) {

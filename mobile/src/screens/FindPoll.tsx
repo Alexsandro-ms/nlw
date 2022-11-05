@@ -21,7 +21,7 @@ export function FindPoll() {
     try {
       setIsLoading(true);
 
-      const response = await api.post("/polls/join", { code });
+      const response = await api.post("/pools/join", { code });
 
       if (!code.trim()) {
         return Toast.show({

@@ -48,7 +48,7 @@ export function DetailsPoll() {
   const fetchPollDetails = async () => {
     try {
       setIsLoading(true);
-      const response = await api.get(`/polls/${id}`);
+      const response = await api.get(`/pools/${id}`);
 
       setPollDetails(response.data.polls);
     } catch (err) {
