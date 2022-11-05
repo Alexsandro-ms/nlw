@@ -1,9 +1,16 @@
+/* Importação de modulos e componentes de suas libs */
 import { FastifyInstance } from "fastify";
 import { z } from "zod";
 import { prisma } from "../lib/prisma";
 import { authenticate } from "../plugins/authenticate";
 
+/**
+ * Ele recebe uma solicitação, verifica se o usuário está autenticado e, em caso afirmativo, retorna o usuário.
+ * @param {FastifyInstance} fastify - FastifyInstance
+ */
+
 export async function authRoutes(fastify: FastifyInstance) {
+  /* Rota de verificação de usuario (via header) e retorno de informações do usuario */
   fastify.get(
     "/me",
     {
@@ -13,6 +20,7 @@ export async function authRoutes(fastify: FastifyInstance) {
       return { user: request.user };
     }
   );
+  /* Criando um novo usuário. */
   fastify.post("/users", async (request) => {
     const createUserBody = z.object({
       access_token: z.string()

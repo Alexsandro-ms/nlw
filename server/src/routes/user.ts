@@ -1,3 +1,4 @@
+/* Importando componentes de suas libs */
 import { FastifyInstance } from "fastify";
 import { prisma } from "../lib/prisma";
 
