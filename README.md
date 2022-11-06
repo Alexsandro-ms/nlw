@@ -8,6 +8,8 @@ Bootcamp da @rocketseat temático copa do mundo 2022.
 
 Projeto foi realizado em 5 dias, com a mentoria do @diego3g e do @rodrigorgtic, aonde foi desenvolvido uma api, uma versão web e aplicação mobile. Onde um usuário pode criar um 'Bolão' de aposta, e convidar outros usuários, informando seus palpites para os jogos da copa do mundo 2022.
 
+<br />
+
 ## Instalação do projeto
 
 1. [NodeJS](https://nodejs.org) Deve ser instalado, Após a instalação do node, Terá que Clonar este repositório:
@@ -28,7 +30,6 @@ Projeto foi realizado em 5 dias, com a mentoria do @diego3g e do @rodrigorgtic, 
 ```sh
  cd ../mobile && npm install # ou yarn install
 ```
-
 <br />
 
 ## Iniciando projeto
@@ -45,6 +46,9 @@ Projeto foi realizado em 5 dias, com a mentoria do @diego3g e do @rodrigorgtic, 
 ```sh
  cd ../mobile && npx expo start # ou yarn expo start
 ```
+
+<br />
+
 
 ### Web
 <hr />
@@ -64,15 +68,14 @@ Projeto foi realizado em 5 dias, com a mentoria do @diego3g e do @rodrigorgtic, 
 1. Criação de bolões
 Crie Bolões e compartilhe o código com os seus amigos!
 
+<br />
+
 ### Server
 <hr />
 <p align="center" >
 <img src=".github/assets/NlwErd.svg" height="735px" />
 </p>
 <hr />
-
-<br />
-
 
 #### Tecnologias
 - Node
@@ -103,6 +106,9 @@ cria jogos e armazena data e código do país
 
 6. Envio de palpites
 Armazena registros enviado pelo usuário
+
+<br />
+
 
 ### Mobile
 <hr />
