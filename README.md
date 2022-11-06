@@ -98,7 +98,7 @@ Armazena registros enviado pelo usuário
 
 ### Mobile
 <p align="center" >
-<img src=".github/assets/NlwMobile.gif" height="250px" />
+<img src=".github/assets/NlwMobile.gif" height="450px" />
 </p>
 #### Tecnologias
 - React Native
