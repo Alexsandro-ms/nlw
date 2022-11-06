@@ -158,7 +158,7 @@ Veja os detalhes do bolão, participantes, próximos jogos, código de envio e t
 
 <br />
 
-##### Design
+### Design
 <hr />
 
 [Design no Figma](https://www.figma.com/community/file/1169028343875283461)
