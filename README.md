@@ -32,15 +32,15 @@ Projeto foi realizado em 5 dias, com a mentoria do @diego3g e do @rodrigorgtic, 
 ## Iniciando projeto
 
   - Server:
-```
+```sh
  cd ../server && npm run dev # ou yarn dev
 ```
   - Web:
-```
+```sh
  cd ../web && npm run dev # ou yarn dev
 ```
   - Mobile:
-```
+```sh
  cd ../mobile && npx expo start # ou yarn expo start
 ```
 
