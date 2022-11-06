@@ -29,6 +29,8 @@ Projeto foi realizado em 5 dias, com a mentoria do @diego3g e do @rodrigorgtic, 
  cd ../mobile && npm install # ou yarn install
 ```
 
+<br />
+
 ## Iniciando projeto
 
   - Server:
@@ -68,6 +70,9 @@ Crie Bolões e compartilhe o código com os seus amigos!
 <img src=".github/assets/NlwErd.svg" height="735px" />
 </p>
 <hr />
+
+<br />
+
 
 #### Tecnologias
 - Node
