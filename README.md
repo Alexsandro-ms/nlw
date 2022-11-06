@@ -1,13 +1,12 @@
-<img src=".github/assets/NlwCapa.svg" />
-
 <p align="center" >
+<img src=".github/assets/NlwCapa.svg"  height="450px" />
+</p>
+
 
 # Nlw
 Bootcamp da @rocketseat temático copa do mundo 2022.
 
 Projeto foi realizado em 5 dias, com a mentoria do @diego3g e do @rodrigorgtic, aonde foi desenvolvido uma api, uma versão web e aplicação mobile. Onde um usuário pode criar um 'Bolão' de aposta, e convidar outros usuários, informando seus palpites para os jogos da copa do mundo 2022.
-
-</p>
 
 ## Instalação do projeto
 
@@ -46,7 +45,9 @@ Projeto foi realizado em 5 dias, com a mentoria do @diego3g e do @rodrigorgtic, 
 ```
 
 ### Web
-<img src=".github/assets/NlwWeb.svg" />
+<p align="center" >
+<img src=".github/assets/NlwWeb.svg" height="450px" />
+</p>
 
 #### Tecnologias
 - React
@@ -61,7 +62,9 @@ Projeto foi realizado em 5 dias, com a mentoria do @diego3g e do @rodrigorgtic, 
 Crie Bolões e compartilhe o código com os seus amigos!
 
 ### Server
-
+<p align="center" >
+<img src=".github/assets/NlwErd.svg" height="735px" />
+</p>
 
 #### Tecnologias
 - Node
@@ -93,7 +96,7 @@ cria jogos e armazena data e código do país
 6. Envio de palpites
 Armazena registros enviado pelo usuário
 
-#### Mobile
+### Mobile
 
 #### Tecnologias
 - React Native
@@ -112,7 +115,7 @@ Armazena registros enviado pelo usuário
     - React Native Svg
     - React Native Svg Transformer
 
-##### Funcionalidades
+#### Funcionalidades
 
 1. Login de usuário
 Login de usuário com autenticação com google.
