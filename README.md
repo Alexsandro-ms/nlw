@@ -97,7 +97,9 @@ cria jogos e armazena data e código do país
 Armazena registros enviado pelo usuário
 
 ### Mobile
-
+<p align="center" >
+<img src=".github/assets/NlwMobile.gif" height="250px" />
+</p>
 #### Tecnologias
 - React Native
 - Typescript
