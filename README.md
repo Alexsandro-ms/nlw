@@ -45,10 +45,11 @@ Projeto foi realizado em 5 dias, com a mentoria do @diego3g e do @rodrigorgtic, 
 ```
 
 ### Web
+<hr />
 <p align="center" >
 <img src=".github/assets/NlwWeb.svg" height="450px" />
 </p>
-
+<hr />
 #### Tecnologias
 - React
 - NextJs
@@ -62,9 +63,11 @@ Projeto foi realizado em 5 dias, com a mentoria do @diego3g e do @rodrigorgtic, 
 Crie Bolões e compartilhe o código com os seus amigos!
 
 ### Server
+<hr />
 <p align="center" >
 <img src=".github/assets/NlwErd.svg" height="735px" />
 </p>
+<hr />
 
 #### Tecnologias
 - Node
@@ -97,9 +100,12 @@ cria jogos e armazena data e código do país
 Armazena registros enviado pelo usuário
 
 ### Mobile
+<hr />
 <p align="center" >
 <img src=".github/assets/NlwMobile.gif" height="450px" />
 </p>
+<hr />
+
 #### Tecnologias
 - React Native
 - Typescript
@@ -137,6 +143,10 @@ Insira seus palpites para os próximos jogos.
 6. Detalhes do bolão
 Veja os detalhes do bolão, participantes, próximos jogos, código de envio e todos os seus palpites.
 
+<br />
+
 ##### Design
+<hr />
+
 [Design no Figma](https://www.figma.com/community/file/1169028343875283461)
 
