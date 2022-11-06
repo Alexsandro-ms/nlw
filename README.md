@@ -56,7 +56,9 @@ Projeto foi realizado em 5 dias, com a mentoria do @diego3g e do @rodrigorgtic, 
 <img src=".github/assets/NlwWeb.svg" height="450px" />
 </p>
 <hr />
+
 #### Tecnologias
+
 - React
 - NextJs
 - Typescript
